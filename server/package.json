@@ -1,0 +1,12 @@
+{
+  "name": "pharmameduniversity-server",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch --env-file-if-exists=.env index.js",
+    "start": "node --env-file-if-exists=.env index.js"
+  },
+  "description": "Express server. Dependencies are declared in the root package.json so a single npm install at the root works on Hostinger."
+}
