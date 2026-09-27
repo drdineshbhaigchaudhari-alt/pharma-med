@@ -42,9 +42,20 @@ app.use(
 
 // Serve the React build in production (npm run build)
 const dist = path.resolve(__dirname, '../client/dist');
-if (fs.existsSync(dist)) {
+const hasBuild = fs.existsSync(path.join(dist, 'index.html'));
+if (hasBuild) {
   app.use(express.static(dist, { maxAge: '7d', index: false }));
   app.get(/^\/(?!api\/).*/, (_req, res) => res.sendFile(path.join(dist, 'index.html')));
+} else {
+  app.get(/^\/(?!api\/).*/, (_req, res) =>
+    res.status(503).send('Website build not found. Run "npm run build" (Hostinger: set Build command to npm run build) and redeploy.')
+  );
 }
 
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+console.log(`[startup] Node ${process.version}, PORT=${process.env.PORT ?? '(not set, using 5000)'}, build ${hasBuild ? 'found' : 'MISSING'} at ${dist}`);
+app
+  .listen(PORT, () => console.log(`[startup] Server running on port ${PORT}`))
+  .on('error', (err) => {
+    console.error('[startup] Could not listen on port', PORT, err);
+    process.exit(1);
+  });

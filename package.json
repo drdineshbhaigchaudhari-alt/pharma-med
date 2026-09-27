@@ -3,15 +3,15 @@
   "private": true,
   "version": "1.0.0",
   "description": "Pharma Med University website (React + Node)",
-  "main": "server/index.js",
+  "main": "server.js",
   "engines": {
-    "node": ">=18.18"
+    "node": ">=20"
   },
   "scripts": {
     "install:all": "npm install && npm install --prefix client",
     "dev": "concurrently -n client,server -c cyan,green \"npm run dev --prefix client\" \"npm run dev --prefix server\"",
     "build": "npm install --prefix client --include=dev && npm run build --prefix client",
-    "start": "node server/index.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "cors": "^2.8.5",

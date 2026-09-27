@@ -21,11 +21,11 @@ If `SMTP_HOST` isn't set, form emails go to a free **Ethereal** test inbox. The 
    | Setting | Value |
    |---|---|
    | Framework | Express (or Other) |
-   | Node.js version | 20 or 22 |
+   | Node.js version | **20 or 22** (18 will NOT work) |
    | Root directory | `/` (repository root) |
    | Install | `npm install` (default) |
    | Build command | `npm run build` |
-   | Start command / entry file | `npm start` / `server/index.js` |
+   | Start command / entry file | `npm start` / `server.js` |
 3. Add **Environment variables** in the app's settings (see `server/.env.example`):
    ```
    SMTP_HOST=smtp.hostinger.com
@@ -41,6 +41,11 @@ If `SMTP_HOST` isn't set, form emails go to a free **Ethereal** test inbox. The 
    Hostinger sets `PORT` itself, so don't add it.
 4. Deploy, then connect the domain `pharmameduniversity.com` to the app and turn on the free SSL certificate.
 5. Every later `git push` to `main` can redeploy automatically, if auto-deploy is on.
+
+**If you see "503 Service Unavailable":** the app isn't running. Open the app's **Logs** in hPanel and look for `[startup]` lines:
+- no `[startup]` line at all means the build failed or Node is older than 20. Check the build log and the Node version.
+- `build MISSING` means the Build command isn't `npm run build`.
+- `Could not listen on port` means another app is using the port. Restart the app.
 
 To run production mode on any other server: `npm install && npm run build && npm start`.
 
