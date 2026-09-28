@@ -7,9 +7,11 @@ import Section from '../components/ui/Section';
 import StatCounter from '../components/ui/StatCounter';
 import CTABanner from '../components/ui/CTABanner';
 import EnquiryForm from '../components/forms/EnquiryForm';
+import FacultyGrid from '../components/ui/FacultyGrid';
+import { faculty } from '../data/faculty';
 import { programs } from '../data/programs';
 import { images } from '../data/images';
-import { site, stats, notices } from '../data/site';
+import { site, stats, notices, viceChancellor } from '../data/site';
 
 const slides = [
   { image: images.heroStudents, eyebrow: 'Admissions 2026-27 Open', title: 'Shape the Future of Healthcare', text: 'PCI-approved B.Pharm, M.Pharm, Pharm.D and D.Pharm programmes in the heart of Ahmedabad.' },
@@ -147,6 +149,32 @@ export default function Home() {
         </div>
       </Section>
 
+      {/* Vice Chancellor */}
+      <section className="relative isolate overflow-hidden bg-brand-900 py-16 sm:py-20">
+        <div className="absolute -right-32 -top-32 -z-10 h-96 w-96 rounded-full bg-accent-500/10" aria-hidden />
+        <div className="absolute -bottom-40 -left-24 -z-10 h-96 w-96 rounded-full bg-saffron-400/10" aria-hidden />
+        <div className="container-x grid items-center gap-10 lg:grid-cols-[420px_1fr] lg:gap-16">
+          <div className="relative mx-auto w-full max-w-sm lg:max-w-none">
+            <div className="absolute -bottom-4 -right-4 h-full w-full rounded-3xl border-2 border-saffron-400/60" aria-hidden />
+            <img src={viceChancellor.photo} alt={viceChancellor.name} className="relative aspect-[4/5] w-full rounded-3xl object-cover object-top shadow-2xl" loading="lazy" />
+          </div>
+          <div className="text-center lg:text-left">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-saffron-400">Leadership</p>
+            <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl lg:text-5xl">{viceChancellor.name}</h2>
+            <p className="mt-3 text-lg font-medium text-white/80">
+              {viceChancellor.title}, {viceChancellor.org}
+            </p>
+            <span className="mx-auto mt-6 block h-1 w-20 rounded bg-saffron-400 lg:mx-0" aria-hidden />
+            <p className="mt-6 max-w-xl text-white/70 lg:max-w-2xl">
+              Leading Pharma Medical University in its mission of excellence in pharmaceutical education, research and patient-centred practice.
+            </p>
+            <Link to="/about#vice-chancellor" className="mt-8 inline-flex items-center gap-2 rounded-lg bg-saffron-400 px-5 py-3 font-semibold text-brand-900 transition hover:bg-saffron-500">
+              About our leadership <ArrowRight size={16} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Programmes */}
       <Section className="bg-slate-50" eyebrow="Academic Programmes" title="Find the right programme for you" intro="From a two-year diploma to a professional doctorate, choose the path that matches your goals." center>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -190,6 +218,12 @@ export default function Home() {
             </div>
           ))}
         </div>
+      </Section>
+
+      {/* Faculty */}
+      <Section eyebrow="Our Faculty" title="Learn from experienced teachers and researchers">
+        <FacultyGrid people={faculty.filter((f) => f.featured)} />
+        <Link to="/faculty" className="mt-8 inline-flex items-center gap-2 font-semibold text-accent-600 hover:text-accent-700">Meet all faculty <ArrowRight size={16} /></Link>
       </Section>
 
       {/* Facilities */}

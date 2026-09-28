@@ -41,6 +41,13 @@ export const stats = [
 ];
 
 // Generic text badges - replace with official logos once approvals are confirmed.
+export const viceChancellor = {
+  name: 'Professor (Dr.) Susma Goyal',
+  title: 'Vice Chancellor',
+  org: 'Pharma Medical University',
+  photo: '/images/leadership/vice-chancellor.jpg',
+};
+
 export const approvals = [
   { short: 'PCI', long: 'Pharmacy Council of India Approved' },
   { short: 'AICTE', long: 'All India Council for Technical Education' },
@@ -57,8 +64,12 @@ export const nav = [
     to: '/about',
     children: [
       { label: 'About PMU', to: '/about' },
+      { label: 'Vice Chancellor', to: '/about#vice-chancellor' },
+      { label: 'Faculty & Staff', to: '/faculty' },
+      { label: 'Research', to: '/about#research' },
+      { label: 'Students & Placements', to: '/about#students' },
       { label: 'Vision & Mission', to: '/about#vision' },
-      { label: "Director's Message", to: '/about#director' },
+      { label: "Vice Chancellor's Message", to: '/about#message' },
       { label: 'Approvals & Accreditation', to: '/about#approvals' },
     ],
   },

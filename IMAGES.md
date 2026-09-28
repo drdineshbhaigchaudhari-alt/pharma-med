@@ -17,10 +17,25 @@ To swap in a Freepik image, download it (with a valid Freepik licence), save it 
 | campus-students.jpg | About hero, Campus Life | pexels.com/photo/39006532 | "indian college students campus group" |
 | campus-study.jpg | Home slider, Contact | pexels.com/photo/4622108 (Kiran Pokuri Photography) | "indian students studying campus lawn laptop" |
 | library-student.jpg | Library, Enquire | pexels.com/photo/16504588 | "indian girl student reading library" |
-| graduates.jpg | About, Placements, stats band | pexels.com/photo/13019686 | "indian graduates convocation smiling" |
+| graduates.jpg | Placements hero, Home stats band | pexels.com/photo/37410979 (Raju) | "indian graduates convocation smiling" |
 | students-celebrate.jpg | Campus Life hero, CTA band | pexels.com/photo/31968811 (Yash Bakode) | "indian college students celebration farewell" |
 
+## Faculty photos (representative stock images)
+
+The photos in `client/public/images/faculty/` are free stock photos of Indian professionals, **not the actual faculty members**. Every card shows a "Representative image" label for that reason. Replace each file with the real person's photo (same file name) and remove `representative: true` from their entry in `client/src/data/faculty.js`.
+
+| File | Pexels source (photographer) |
+|---|---|
+| karan-gupta.jpg | pexels.com/photo/37894130 (Vishal Kampani) |
+| amit-goyal.jpg | pexels.com/photo/9127300 (Shailesh Mishra) |
+| hitesh-kumar.jpg | pexels.com/photo/13439447 (USBofPhotography) |
+| tn-bansal.jpg | pexels.com/photo/27298085 (Sagar Tiwari) |
+| sunit-bean.jpg | pexels.com/photo/36781276 (ShootSaga) |
+| mohit-rehija.jpg | pexels.com/photo/31695306 (ShootSaga) |
+| preem-sood.jpg | pexels.com/photo/7580937 (RDNE) |
+| vijay-kukraja.jpg | pexels.com/photo/9171219 (MrLokesh Tiwari) |
+
 ## Still needed from the university
-- The Director's photo (`/images/director.jpg`). The About page shows a placeholder for now; see the comment in `About.jsx`.
+- Real photos of all faculty members (see above).
 - Official approval logos (PCI, AICTE, NAAC, ...). These are text badges for now.
 - Real campus photographs. These should replace the stock photos before launch, since stock images show other campuses.

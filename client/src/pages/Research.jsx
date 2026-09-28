@@ -1,4 +1,4 @@
-import { FlaskConical, Dna, Leaf, Brain, Atom, ShieldPlus } from 'lucide-react';
+import { FlaskConical, Dna, Leaf, Activity, Atom, Cpu } from 'lucide-react';
 import PageHero from '../components/layout/PageHero';
 import Seo from '../components/layout/Seo';
 import Section from '../components/ui/Section';
@@ -9,12 +9,12 @@ import { CheckList } from '../components/ui/AccreditationStrip';
 import { images } from '../data/images';
 
 const areas = [
-  { icon: FlaskConical, title: 'Novel Drug Delivery', text: 'Nanoparticles, liposomes, transdermal and targeted delivery systems.' },
-  { icon: Leaf, title: 'Herbal & Natural Products', text: 'Standardisation and validation of traditional Indian medicinal plants.' },
-  { icon: Brain, title: 'Neuropharmacology', text: 'Pre-clinical models for anxiety, epilepsy and neurodegenerative disorders.' },
-  { icon: Atom, title: 'Computer-Aided Drug Design', text: 'Molecular docking, QSAR and AI-assisted lead discovery.' },
-  { icon: Dna, title: 'Pharmaceutical Biotechnology', text: 'Biologics, fermentation and recombinant protein studies.' },
-  { icon: ShieldPlus, title: 'Pharmacovigilance', text: 'Adverse drug reaction monitoring in partnership with hospitals.' },
+  { icon: FlaskConical, title: 'Drug Delivery', text: 'Novel and targeted delivery systems that improve how medicines reach the body.' },
+  { icon: Activity, title: 'Pharmacokinetics', text: 'How drugs are absorbed, distributed, metabolised and eliminated.' },
+  { icon: Dna, title: 'Drug Design', text: 'Rational design and synthesis of new therapeutic molecules.' },
+  { icon: Cpu, title: 'Computational Chemistry', text: 'Molecular modelling, docking and in-silico screening of drug candidates.' },
+  { icon: Leaf, title: 'Phytochemistry', text: 'Isolation and study of bioactive compounds from medicinal plants.' },
+  { icon: Atom, title: 'Nanotechnology', text: 'Nanocarriers and nanoformulations for safer, more effective therapy.' },
 ];
 
 const phdRows = [
@@ -33,10 +33,10 @@ export default function Research() {
       <section className="bg-brand-800 py-14">
         <div className="container-x grid grid-cols-2 gap-10 lg:grid-cols-4">
           {[
-            { value: 420, suffix: '+', label: 'Research Publications' },
-            { value: 38, suffix: '', label: 'Funded Projects' },
-            { value: 22, suffix: '', label: 'Patents Filed' },
-            { value: 45, suffix: '+', label: 'Ph.D Awarded' },
+            { value: 375, suffix: '+', label: 'Research Publications' },
+            { value: 7076, suffix: '', label: 'Citations' },
+            { value: 44, suffix: '', label: 'h-index' },
+            { value: 4, suffix: '', label: 'Patents' },
           ].map((s) => <StatCounter key={s.label} {...s} light />)}
         </div>
       </section>
@@ -64,7 +64,9 @@ export default function Research() {
                 items={[
                   'Central Instrumentation Facility with HPLC, HPTLC, FTIR, DSC, dissolution testers and a stability chamber',
                   'CPCSEA-registered animal house for pre-clinical studies',
-                  'Grants from DST, SERB, GUJCOST and ICMR, plus industry-sponsored projects',
+                  'DST-FIST recognised department with more than ₹4 crores of research funding',
+                  'Grants from DST, SERB, ICMR, DBT, UGC and CSIR, with ongoing extramural projects worth over ₹1250 lakhs',
+                  'Four faculty members among the top 2% cited scientists worldwide',
                   'Seed-money scheme for faculty and student research',
                   'Incubation support for pharma start-ups through the PMU Innovation Cell',
                 ]}

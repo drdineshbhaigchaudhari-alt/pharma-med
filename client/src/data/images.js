@@ -49,8 +49,8 @@ export const images = {
   },
   graduates: {
     src: '/images/graduates.jpg',
-    alt: 'Two smiling graduates celebrating on convocation day',
-    credit: 'Pexels',
+    alt: 'Graduates in convocation gowns celebrating together on the lawn',
+    credit: 'Raju / Pexels',
   },
   celebrate: {
     src: '/images/students-celebrate.jpg',
