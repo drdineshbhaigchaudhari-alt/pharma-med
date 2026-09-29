@@ -8,7 +8,7 @@ function DoctorAvatar({ index }) {
     <svg viewBox="7 11 50 50" className="aspect-square w-full" aria-hidden>
       <rect width="64" height="64" fill={tints[index % tints.length]} />
       <path d="M8 64c0-13 10-20 24-20s24 7 24 20z" fill="#fff" stroke="#cbd5e1" />
-      <path d="M26 44l6 10 6-10" fill="#1e3a8a" />
+      <path d="M26 44l6 10 6-10" fill="#063A23" />
       <path d="M22 45l10 19M42 45L32 64" stroke="#cbd5e1" strokeWidth="1.5" fill="none" />
       <path d="M24 46c-3 6 0 12 5 12" stroke="#334155" strokeWidth="2" fill="none" strokeLinecap="round" />
       <circle cx="29" cy="58" r="2.5" fill="#334155" />

@@ -9,7 +9,7 @@ export default function Logo({ light = false }) {
         <img
           src="/brand/pmu-logo-72.png"
           srcSet="/brand/pmu-logo-72.png 1x, /brand/pmu-logo-144.png 2x"
-          width="76"
+          width="72"
           height="72"
           alt="Pharma Med University logo"
           className="h-[60px] w-auto sm:h-[72px]"

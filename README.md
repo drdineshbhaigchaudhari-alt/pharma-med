@@ -77,14 +77,16 @@ All text is original, AI-written copy. These values are **placeholders** and mus
 
 ## Logo files
 
-Original logo: `client/public/brand/pmu-logo-full.png` (transparent background, trimmed).
+Original logo: `client/public/brand/pmu-logo-full.png` (round seal, transparent outside the circle).
+
+Brand colours (from the seal, set in `client/tailwind.config.js`): forest green `#012817` / `#063A23`, gold `#DFA83E`, leaf green `#5AA832`.
 
 | File | Use |
 |---|---|
-| `brand/pmu-logo-full.png` | Full logo, 1147×1093: print, prospectus, social media |
+| `brand/pmu-logo-full.png` | Full seal, 1186×1186: print, prospectus, social media |
 | `brand/pmu-logo-480.png` | Medium size for documents and slides |
 | `brand/pmu-logo-72.png`, `pmu-logo-144.png` | Website header and footer (normal and retina screens) |
-| `brand/pmu-crest-512.png` | Shield only, square: profile pictures and app icons |
-| `favicon.ico`, `apple-touch-icon.png` | Browser tab and phone home-screen icon (made from the shield) |
+| `brand/pmu-crest-512.png` | Seal on white, square: profile pictures and app icons |
+| `favicon.ico`, `apple-touch-icon.png` | Browser tab and phone home-screen icon (made from the seal) |
 
 All files are in `client/public/`. The logo is shown by `client/src/components/layout/Logo.jsx`.
